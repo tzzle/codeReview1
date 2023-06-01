@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <p class="items">Item 1 =</p> 
+    <p class="items" id="demo">100</p>
+    <button type="button" onclick="clickA()">A</button>
+    <br>
+    <p class="items">Item 2 =</p> 
+    <p class="items" id="demo1">200</p>
+    <button type="button" onclick="clickB()">B</button>
+    <br>
+    <p class="items">Item 3 =</p> 
+    <p class="items" id="demo2">300</p>
+    <button type="button" onclick="clickC()">C</button>
+    <br>
+    
+    <button onclick="sumATON()">=</button>
+    <!--Create empty p elements here-->
+    <p id="empt1"></p>
+    <p id="empt2"></p>
+    <p id="sum"></p>
+    <script>
+        let a = document.getElementById("demo").innerHTML;
+        let b = document.getElementById("demo1").innerHTML;
+        let c = document.getElementById("demo2").innerHTML;
+
+        function clickA() {
+            document.getElementById("empt1").innerHTML = a;
+        }
+
+        function clickB() {
+            document.getElementById("empt2").innerHTML = b;
+        }
+
+        function clickC() {
+            document.getElementById("empt2").innerHTML = c;
+        }
+
+
+        function sumATON() {
+            const firstItem = parseInt(document.getElementById('empt1').innerHTML);
+            const secondItem = parseInt(document.getElementById('empt2').innerHTML);
+            document.getElementById("sum").innerHTML = firstItem + secondItem;
+        }
+    </script>
+</body>
+</html>
